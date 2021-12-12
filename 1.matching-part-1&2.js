@@ -60,7 +60,7 @@ my code below
 // console.log(search8Result); // produces an array with all the letters of the alphabet found inside of sentence -- in order of appearance
 
 let sentence =
-  "The 11 Quick 65 brown 7210 fox 6054 jumps 32 over 205 the 51 lazy 103 dog really reallly";
+  "The 11 Quick 65 brown 7210 fox 6054 _ jumps 32 over 205 the 51 lazy 103 dog really reallly The";
 
 // example number nine getting the matched numbers and characters of the alphabet using the [] and the match() method
 
@@ -88,8 +88,27 @@ let sentence2 = "gooooooooogle";
 // let search12Result = sentence2.match(boobies12X);
 // console.log(search12Result); // grabs all of the occurances of the request no matter how many oooooooo
 
-// example number 13 -- get all of the matched characters with lazy matching
+// example number 13 -- get all of the matched characters with lazy matching ? -- as opposed to greedy matching
 
-let boobies13X;
-let search13Result = sentence2.match(boobies13X);
-console.log(search13Result);
+// let boobies13X = /T.*/g; // greedy example // greedy example -- returns the entire sentence
+// let boobies13X = /T.*?/g; // returns just T
+// let search13Result = sentence.match(boobies13X);
+// console.log(search13Result);
+
+// example number 14 -- matching the beginning string patterns
+
+// let boobies14X = /^The/i; // with or without the i it only returns the first instance -- without brackets
+// let search14Result = sentence.match(boobies14X);
+// console.log(search14Result);
+
+// example number fifteen -- matching the ending string patterns
+
+let boobies15X = /The$/i; // with or without the i it only returns the first instance -- without brackets
+let search15Result = sentence.match(boobies15X);
+console.log(search15Result);
+
+// example number sixteen -- matching all letters and numbers
+
+let boobies16X = /\w/g; // lowercase w matches a-z and 0-9 and _ -- only, no special characters
+let search16Result = sentence.match(boobies16X);
+console.log(search16Result);
