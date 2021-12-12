@@ -60,7 +60,7 @@ my code below
 // console.log(search8Result); // produces an array with all the letters of the alphabet found inside of sentence -- in order of appearance
 
 let sentence =
-  "The 11 Quick 65 brown 7210 fox 6054 _ jumps 32 over 205 the 51 lazy 103 dog really reallly The";
+  "The 11 Quick 65 brown 7210 fox 6054 _ jumps 32 over 205 the 51 lazy 103 dog really reallly @ The %% & * () [] {} - + = * /";
 
 // example number nine getting the matched numbers and characters of the alphabet using the [] and the match() method
 
@@ -103,12 +103,40 @@ let sentence2 = "gooooooooogle";
 
 // example number fifteen -- matching the ending string patterns
 
-let boobies15X = /The$/i; // with or without the i it only returns the first instance -- without brackets
-let search15Result = sentence.match(boobies15X);
-console.log(search15Result);
+// let boobies15X = /The$/i; // with or without the i it only returns the first instance -- without brackets
+// let search15Result = sentence.match(boobies15X);
+// console.log(search15Result);
 
 // example number sixteen -- matching all letters and numbers
 
-let boobies16X = /\w/g; // lowercase w matches a-z and 0-9 and _ -- only, no special characters
-let search16Result = sentence.match(boobies16X);
-console.log(search16Result);
+// let boobies16X = /\w/g; // lowercase w matches a-z and 0-9 and _ (basically all non-letters and non-numbers or the underscore) -- only, no special characters
+// let search16Result = sentence.match(boobies16X);
+// console.log(search16Result);
+
+// example 17 -- matching NOT all letters and numbers (basically the opposite of sixteen) but returning everything else
+
+// let boobies17X = /\W/g; // everything but uppercase w matches a-z and 0-9 and _ -- basically all special characters
+// let search17Result = sentence.match(boobies17X);
+// let search17Result = sentence.match(boobies17X).length;
+// console.log(search17Result);
+
+// example number eighteen -- matching all numbers
+
+// let boobies18X = /\d/g;
+// let search18Result = sentence.match(boobies18X);
+// let search18Result = sentence.match(boobies18X).length;
+// console.log(search18Result);
+
+// example number nineteen -- matching all non numbers
+
+// let boobies19X = /\D/g;
+// let search19Result = sentence.match(boobies19X);
+// let search19Result = sentence.match(boobies19X).length;
+// console.log(search19Result);
+
+// example number 20 -- matching all of the white space -- space, enter, tab etc
+
+let boobies20X = /\s/g;
+let search20Result = sentence.match(boobies20X);
+// let search20Result = sentence.match(boobies20x).length;
+console.log(search20Result);
