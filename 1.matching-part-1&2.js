@@ -1,58 +1,3 @@
-// let sentence = "The Quick brown fox jumps over the lazy dog";
-
-// Example 1 -> Matching a word in a sentence (case-sensitive) (the test method)
-
-// let reg1X = /dog/;
-// let reg1X = /cat/;
-// let search1Result = reg1X.test(sentence);
-// console.log(search1Result);
-
-// Example 2 -> Matching for Multiple Words (OR|) (case-sensitive) (the test method)
-
-// let reg2X = /dog|fox|brown/;
-// let reg2X = /dog|cat|blue/;
-// let reg2X = /bird|cat|blue/;
-// let search2Result = reg2X.test(sentence);
-// console.log(search2Result);
-
-// Example 3 -> Ignoring the case-sensitiveness (using the i flag) (the test method)
-
-// let reg3X = /quick/i;
-// let search3Result = reg3X.test(sentence);
-// console.log(search3Result);
-
-// Exmaple 6 -> Getting the matched word (the match method)
-
-// let reg4X = /box/i;
-// let reg4X = /fox/i;
-// let search4Result = sentence.match(reg4X);
-// console.log(search4Result);
-
-// Example 5 -> Getting the matched words (using the g flag) (the match method)
-
-// let reg5X = /the/gi;
-// let search5Result = sentence.match(reg5X);
-// console.log(search5Result);
-
-// Example 6 -> Getting the matched words with the dot (the match method)
-
-// let reg6X = /.o./g;
-// let reg6X = /./g;
-// let search6Result = sentence.match(reg6X);
-// console.log(search6Result);
-
-// Example 7 -> Getting the matched characters with [] (the match method)
-
-// let reg7X = /[bdh]/g;
-// let search7Result = sentence.match(reg7X);
-// console.log(search7Result);
-
-// Example 8 -> Getting the matched characters of alphabet with [] (the match method)
-
-// let reg8X = /[a-z]/gi;
-// let search8Result = sentence.match(reg8X);
-// console.log(search8Result);
-
 // forgive yourself
 
 /*
@@ -80,3 +25,36 @@ let sentence = "The Quick brown fox jumps over the lazy dog";
 // console.log(search3Result); // the result is false without the i flag but true WITH the i flag
 
 //example four -- getting the matched word utilizing the match() method
+
+// let boobie4X = /fox/i;
+// // or
+// let boobie4X = /box/i;
+
+// let search4Result = sentence.match(boobie4X);
+// console.log(search4Result); // if there is a match, it produces an array from which to work with things // no match, null
+// console.log(search4Result[0]); // allows us to know the location from which to extract this particular word
+
+// example five -- grabing the matched words while utulizing the match() method and using the i flag
+
+// let boobie5x = /the/gi;
+// let search5Result = sentence.match(boobie5x);
+// console.log(search5Result); // produces an array of all occurences of the searched-for string
+
+// example six -- getting the matched words with the DOT while utilizing the match method
+
+// let boobie6X = /.o./g; // produces an array with all of the three-letter string matches
+// let boobie6X = /./g; // produces an array with every single character in the sentence let
+// let search6Result = sentence.match(boobie6X);
+// console.log(search6Result);
+
+// example se7en -- getting the matched characters by using the [] and utilizing the match method
+
+// let boobie7X = /[bdh]/g; //looking for all the b d and h characters
+// let search7Result = sentence.match(boobie7X);
+// console.log(search7Result); // produces an array with all of the matches of those characters
+
+// example eight -- finds which letters of the alphabet with the [] utilizing the match() method
+
+let boobie8X = /[a-z]/gi;
+let search8Result = sentence.match(boobie8X);
+console.log(search8Result); // produces an array with all the letters of the alphabet found inside of sentence -- in order of appearance
