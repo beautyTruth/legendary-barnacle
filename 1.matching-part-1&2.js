@@ -1,4 +1,4 @@
-let sentence = "The Quick brown fox jumps over the lazy dog";
+// let sentence = "The Quick brown fox jumps over the lazy dog";
 
 // Example 1 -> Matching a word in a sentence (case-sensitive) (the test method)
 
@@ -52,3 +52,31 @@ let sentence = "The Quick brown fox jumps over the lazy dog";
 // let reg8X = /[a-z]/gi;
 // let search8Result = sentence.match(reg8X);
 // console.log(search8Result);
+
+// forgive yourself
+
+/*
+my code below
+*/
+
+let sentence = "The Quick brown fox jumps over the lazy dog";
+
+// the first example -- matching a word in a sentence (case-sensitive) (the test method)
+
+// let boobie1X = /dog/;
+// let search1Result = boobie1X.test(sentence);
+// console.log(search1Result); // the boolean response is true
+
+// the second example -- we are going to match of multiple words using the (OR | ) (case sensitive) (utilizing the test() method)
+
+// let boobie2X = /dog|fox|brown/;
+// let search2Result = boobie2X.test(sentence);
+// console.log(search2Result); // the boolean results in TRUE because one or more of the entries is present.
+
+// example 3 -- ignoring case-sensitivity by using the i flag while also utilizing the test method
+
+// let boobie3X = /quick/i;
+// let search3Result = boobie3X.test(sentence);
+// console.log(search3Result); // the result is false without the i flag but true WITH the i flag
+
+//example four -- getting the matched word utilizing the match() method

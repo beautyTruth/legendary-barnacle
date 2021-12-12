@@ -29,26 +29,34 @@ section {
   background-size: cover;
 }
 
-/* .fluffernutter::before {
-  background-image: url(background.jpeg);
-  opacity: 0.3;
-} */
+.fluffernutter {
+  overflow: hidden;
+}
 
 .nutella {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.muhimage {
+  position: absolute;
+  opacity: 0.3;
+}
+
 .gettingjiggywithit {
   font-size: 2rem;
+  margin-top: 1rem;
   color: honeydew;
   text-shadow: 0.1rem 0.1rem 0.2rem darkorchid;
+  z-index: 10;
 }
 
 .nananananana {
   font-size: 9rem;
   color: papayawhip;
   text-shadow: 0.2rem 0.2rem 0.5rem cornflowerblue;
+  z-index: 10;
 }
