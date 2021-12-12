@@ -60,7 +60,7 @@ my code below
 // console.log(search8Result); // produces an array with all the letters of the alphabet found inside of sentence -- in order of appearance
 
 let sentence =
-  "The 11 Quick 65 brown 7210 fox 6054 _ jumps 32 over 205 the 51 lazy 103 dog really reallly @ The %% & * () [] {} - + = * /";
+  "The 11 Quick 65 brown 7210 fox 6054 _ jumps 32 over 205 the 51 lazy 103 dog really reallly @ The %% & * () [] {} - + = * / gooooooooogle yeeeeeeeeah";
 
 // example number nine getting the matched numbers and characters of the alphabet using the [] and the match() method
 
@@ -136,7 +136,38 @@ let sentence2 = "gooooooooogle";
 
 // example number 20 -- matching all of the white space -- space, enter, tab etc
 
-let boobies20X = /\s/g;
-let search20Result = sentence.match(boobies20X);
-// let search20Result = sentence.match(boobies20x).length;
-console.log(search20Result);
+// let boobies20X = /\s/g;
+// let search20Result = sentence.match(boobies20X);
+// // let search20Result = sentence.match(boobies20x).length;
+// console.log(search20Result);
+
+// example number 21 -- matching all of the non white space -- space, enter, tab etc
+
+// let boobies21X = /\S/g;
+// let search21Result = sentence.match(boobies21X);
+// // let search21Result = sentence.match(boobies21x).length;
+// console.log(search21Result);
+
+// example 22 -- specifying upper and lower number of matches using the quantity specifiers
+
+// let boobies22X = /o{2,4}/; // are there instances where it's two or four - true
+// let search22Result = boobies22X.test(sentence);
+// console.log(search22Result);
+
+// let boobies22X = /e{3,5}/g; // where are they and what do they consist of
+// let search22Result = sentence.match(boobies22X);
+// console.log(search22Result);
+
+// example 23 -- specifying only the lower number of matches using the quantity specifiers
+
+// let boobies23X = /o{2,}/; //does it happen at least two times -- true
+// let search23Result = boobies23X.test(sentence);
+// console.log(search23Result);
+
+// example 24 -- specifying the exact number of matches using the quantity specifiers
+
+// let boobies24X = /o{2}/; // is there an instance where there is only exactly oo -- false
+// let search24Result = boobies24X.test(boobies24X);
+// console.log(search24Result);
+
+// with the above examples, test() is used to see if the pattern exists and match() is used to extract the matched patern for use in coding apps or whatever
