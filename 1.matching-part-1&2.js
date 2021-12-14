@@ -60,7 +60,7 @@ my code below
 // console.log(search8Result); // produces an array with all the letters of the alphabet found inside of sentence -- in order of appearance
 
 let sentence =
-  "The 11 Quick 65 brown 7210 fox 6054 _ jumps 32 over 205 the 51 lazy 103 dog really reallly @ The %% & * () [] {} - + = * / gooooooooogle yeeeeeeeeah";
+  "The 11 Quick 65 brown 7210 fox 6054 _ jumps jury jogs 32 over 205 the 51 lazy 103 dog really reallly @ The %% & * () [] {} - + = * / gooooooooogle yeeeeeeeeah";
 
 // example number nine getting the matched numbers and characters of the alphabet using the [] and the match() method
 
@@ -82,7 +82,7 @@ let sentence =
 
 // example number twelve -- getting the matched characters that happen zero or more times
 
-let sentence2 = "gooooooooogle";
+// let sentence2 = "gooooooooogle";
 
 // let boobies12X = /go*/;
 // let search12Result = sentence2.match(boobies12X);
@@ -171,3 +171,26 @@ let sentence2 = "gooooooooogle";
 // console.log(search24Result);
 
 // with the above examples, test() is used to see if the pattern exists and match() is used to extract the matched patern for use in coding apps or whatever
+
+let sentence2 = "colour";
+
+// example 25 -- check for all or none
+
+// let boobies25X = /colou?r/; // returns a boolean if the word color or colour is there or not with the ? for lazy search
+// let search25result = boobies25X.test(sentence2);
+// console.log(search25result);
+
+// example twenty-six -- look aheads
+
+// the POSITIVE condition look aheads
+
+// let boobies26X = /j(?=u)/; // looking for all instances where the j is followed by u -- if there is one, the test() method returns true; match() will return the index in the string where it happens
+// let search26result = boobies26X.test(sentence);
+// console.log(search26result);
+
+// the NEGATIVE condition look aheads
+
+// let boobies27X = /j(?!m)/; // will return a boolean confirming whether or not the condition DOESN'T exist
+// let boobies27X = /j(?!u)/; // will return a boolean confirming whether or not the condition DOESN'T exist;
+// let search27result = sentence.match(boobies27X); // will return the first instance in the string where there is a j but without a u
+// console.log(search27result);
