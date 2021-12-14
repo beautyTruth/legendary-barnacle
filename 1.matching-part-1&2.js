@@ -288,3 +288,43 @@ $         -> it makes sure the digits are at the end of the username
 
 // let regXMatchResult = digits.match(reg27X);
 // console.log(regXMatchResult);
+
+// Example 28 -> Searching and replacing patterns within strings
+
+// Example 28.1
+// let sentence = "My dog meows";
+// let regX = /meows/;
+// let replacementText = "barks";
+// let replaceResult = sentence.replace(regX, replacementText);
+// console.log(replaceResult);
+
+// Example 28.2
+let replacement = "My cat barks".replace(/barks/, "meows");
+console.log(replacement);
+
+// the rosetta stone for regEx
+
+/*
+* 0 or more matches
++ 1 or more matches
+? 0 or 1 match
+^ matches the start of the string or line
+$ matches the end of the string or line
+\ signifies an escape sequence
+. matches any single character except newline
+( ) capturing group. Save to reuse later
+| used as a logic OR inside a capturing group
+[abc] character set. Matches one of the things in the brackets
+[^abc] Negated character set. Matches anything except...
+[a-zA-Z] all upper and lowercase letters. You can specify any range.
+{1} exact number of matches. Comes after a set or group.
+{1,5} inclusive range for number of matches
+{1,} minimum number of matches
+{,5} maximum number of matches
+\s any whitespace character
+\S any NON whitespace character
+\d any digit. Same as [0-9]
+\D any NON digit
+\w any word character. Same as [a-zA-Z0-9_]
+\W any NON word character. Same as [^a-za-z0-9_]
+*/
