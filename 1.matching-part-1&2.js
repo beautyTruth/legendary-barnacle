@@ -59,8 +59,8 @@ my code below
 // let search8Result = sentence.match(boobie8X);
 // console.log(search8Result); // produces an array with all the letters of the alphabet found inside of sentence -- in order of appearance
 
-let sentence =
-  "The 11 Quick 65 brown 7210 fox 6054 _ jumps jury jogs 32 over 205 the 51 lazy 103 dog really reallly @ The %% & * () [] {} - + = * / gooooooooogle yeeeeeeeeah";
+// let sentence =
+//   "The 11 Quick 65 brown 7210 fox 6054 _ jumps jury jogs 32 over 205 the 51 lazy 103 dog really reallly @ The %% & * () [] {} - + = * / gooooooooogle yeeeeeeeeah";
 
 // example number nine getting the matched numbers and characters of the alphabet using the [] and the match() method
 
@@ -172,7 +172,7 @@ let sentence =
 
 // with the above examples, test() is used to see if the pattern exists and match() is used to extract the matched patern for use in coding apps or whatever
 
-let sentence2 = "colour";
+// let sentence2 = "colour";
 
 // example 25 -- check for all or none
 
@@ -235,11 +235,11 @@ $         -> it makes sure the digits are at the end of the username
 
 // let password = "cosmictech12345"; // true
 // let password = "cosmictech1"; // false
-let password = "cosmictecH1225"; // true
+// let password = "cosmictecH1225"; // true
 
-let passCheck = /(?=\w{8})(?=\D*\d{2})/;
-let checkStatus = passCheck.test(password);
-console.log(checkStatus);
+// let passCheck = /(?=\w{8})(?=\D*\d{2})/;
+// let checkStatus = passCheck.test(password);
+// console.log(checkStatus);
 
 /* 
 (?=\w{8})  -> a positive lookahead that matches 8 or more letters and digits 
@@ -249,3 +249,42 @@ console.log(checkStatus);
 \D*        -> zero or more occurances of characters that are not digits
 \d{2}      -> two consecutive digits
 */
+
+// Example 27 -> Capture Groups
+
+// let sentence = "book book";
+// let reg27X = /(\w+)\s\1/;
+// let reg27X = /(\w+)\s(\w+)/;
+
+// Testing
+// let regXTestResult = reg27X.test(sentence);
+// console.log(regXTestResult);
+
+// Matching
+/*
+\1        -> a shorthand way for repeating what is in the paranthesis
+(\w+)\s\1 -> "book book"
+(\w+)     -> "book"
+*/
+// let regXMatchResult = sentence.match(reg27X);
+// console.log(regXMatchResult);
+
+// ---------------------------------------------------------------
+// let digits = "321 321 321";
+// let reg27X = /^(\d+)\s\1\s\1$/;
+// let reg27X = /^(\d+)\s(\d+)\s(\d+)$/;
+
+// Testing
+
+// let regXTestResult = reg27X.test(digits);
+// console.log(regXTestResult);
+
+// Matching
+/*
+\1             -> a shorthand way or repeating what is in the parenthesis
+(\d+)\s\1\s\1 -> "321 321 321"
+(\d+)         -> "321"
+*/
+
+// let regXMatchResult = digits.match(reg27X);
+// console.log(regXMatchResult);
