@@ -214,10 +214,10 @@ fourth -- if there are two letters, they cannot contain numbers
 // let username = "kk9";
 // let username = "9kk";
 
-let usernameCheck = /^[A-Za-z]{2,}\d*$/;
+// let usernameCheck = /^[A-Za-z]{2,}\d*$/;
 
-let checkStatus = usernameCheck.test(username);
-console.log(checkStatus);
+// let checkStatus = usernameCheck.test(username);
+// console.log(checkStatus);
 
 /*
 ^[A-Za-z] -> it matches all letters uppercase and lowercase
@@ -225,4 +225,27 @@ console.log(checkStatus);
 \d        -> it inserts matches for digits
 *         -> it matches the characters that occur zero or more times
 $         -> it makes sure the digits are at the end of the username
+*/
+
+/* Case 2
+-----------------------------Requirements-----------------------------
+1- Passwords must be at least 8 characters
+2- Passwords must contain at least two consecutive digits
+*/
+
+// let password = "cosmictech12345"; // true
+// let password = "cosmictech1"; // false
+let password = "cosmictecH1225"; // true
+
+let passCheck = /(?=\w{8})(?=\D*\d{2})/;
+let checkStatus = passCheck.test(password);
+console.log(checkStatus);
+
+/* 
+(?=\w{8})  -> a positive lookahead that matches 8 or more letters and digits 
+(?=)       -> a positive lookahead
+\w         -> matches all letters and numbers and _
+{8}        -> a quantity specifier that is looking for the exact number of occurances which is 8
+\D*        -> zero or more occurances of characters that are not digits
+\d{2}      -> two consecutive digits
 */
