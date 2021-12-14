@@ -194,3 +194,35 @@ let sentence2 = "colour";
 // let boobies27X = /j(?!u)/; // will return a boolean confirming whether or not the condition DOESN'T exist;
 // let search27result = sentence.match(boobies27X); // will return the first instance in the string where there is a j but without a u
 // console.log(search27result);
+
+/*
+here we will work on restricting usernames
+*/
+
+/*
+first -- must have at least two letters
+second -- numbers must be at the end if there are any numbers
+third -- letters can be either lowercase or uppercase
+fourth -- if there are two letters, they cannot contain numbers
+*/
+
+// let username = "sdk"; // true
+// let username = "k9"; // false
+// let username = "sk";
+// let username = "k";
+// let username = "k9";
+// let username = "kk9";
+// let username = "9kk";
+
+let usernameCheck = /^[A-Za-z]{2,}\d*$/;
+
+let checkStatus = usernameCheck.test(username);
+console.log(checkStatus);
+
+/*
+^[A-Za-z] -> it matches all letters uppercase and lowercase
+{2,}      -> it requires the quantity of the characters to be at least 2 
+\d        -> it inserts matches for digits
+*         -> it matches the characters that occur zero or more times
+$         -> it makes sure the digits are at the end of the username
+*/
